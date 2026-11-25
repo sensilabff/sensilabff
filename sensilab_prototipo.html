@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Encontre uma configuração inicial de sensibilidade para Free Fire por modelo de celular. Gere, copie e ajuste sua sensi.">
+<meta name="theme-color" content="#090b10">
+<title>SENSILAB — Laboratório de Sensibilidade Free Fire</title>
+<style>
+:root{--bg:#080a0f;--panel:#10141d;--panel2:#141a24;--line:#252d3b;--text:#f2f5fa;--muted:#98a4b6;--cyan:#63f5df;--lime:#c8ff52;--pink:#ff4d79;--radius:18px}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 75% -15%,#142635 0,transparent 38%),radial-gradient(ellipse at 5% 25%,#201327 0,transparent 30%),var(--bg);color:var(--text);font:15px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial}
+a{color:inherit;text-decoration:none}button,input,select{font:inherit}.wrap{width:min(1120px,92%);margin:auto}
+header{position:sticky;top:0;z-index:5;background:#080a0fe8;backdrop-filter:blur(16px);border-bottom:1px solid #1c2430}
+.nav{height:70px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:10px;font-weight:950;letter-spacing:1.6px}.logo{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;background:linear-gradient(135deg,var(--cyan),#6e85ff);color:#081016;font-weight:1000;box-shadow:0 0 24px #63f5df35}.brand span{color:var(--cyan)}nav{display:flex;gap:22px;color:var(--muted);font-size:13px}nav a:hover{color:var(--cyan)}.pill{border:1px solid #2a3945;border-radius:99px;padding:7px 11px;color:var(--cyan);font-size:12px}
+.hero{padding:66px 0 38px;display:grid;grid-template-columns:1.05fr .95fr;gap:36px;align-items:center}.eyebrow{color:var(--cyan);text-transform:uppercase;font-size:11px;letter-spacing:2px;font-weight:800}.hero h1{font-size:clamp(36px,6vw,68px);line-height:1.02;letter-spacing:-2px;margin:14px 0}.hero h1 em{font-style:normal;color:var(--cyan);text-shadow:0 0 24px #63f5df25}.hero p{max-width:550px;color:var(--muted);font-size:16px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.btn{border:0;border-radius:12px;padding:12px 17px;font-weight:800;cursor:pointer;transition:.2s}.btn-primary{background:var(--cyan);color:#071014;box-shadow:0 8px 28px #63f5df25}.btn-primary:hover{transform:translateY(-2px);filter:brightness(1.08)}.btn-ghost{background:#131923;border:1px solid var(--line);color:var(--text)}
+.hero-art{min-height:290px;border:1px solid #253440;border-radius:24px;background:linear-gradient(145deg,#121d28,#0c1018 70%);padding:24px;position:relative;overflow:hidden}.hero-art:before{content:"";position:absolute;width:260px;height:260px;border-radius:50%;border:1px solid #63f5df24;right:-45px;top:-50px;box-shadow:0 0 0 25px #63f5df08,0 0 0 50px #63f5df05}.hero-art:after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,#63f5df08,transparent 60%);pointer-events:none}.art-top{display:flex;justify-content:space-between;color:var(--muted);font-size:12px}.art-status{color:var(--lime)}.art-number{font-size:76px;font-weight:950;letter-spacing:-5px;margin:35px 0 0;color:var(--cyan);text-shadow:0 0 30px #63f5df30}.art-caption{color:var(--muted);font-size:12px}.mini-bars{display:flex;gap:7px;margin-top:22px;align-items:end;height:42px}.mini-bars i{display:block;width:9%;border-radius:4px 4px 0 0;background:linear-gradient(var(--cyan),#4469ad);opacity:.8}
+.section-title{display:flex;align-items:end;justify-content:space-between;gap:12px;margin:30px 0 16px}.section-title h2{margin:0;font-size:24px;letter-spacing:-.5px}.section-title p{margin:4px 0 0;color:var(--muted);font-size:13px}
+.generator{display:grid;grid-template-columns:.9fr 1.1fr;gap:16px}.card{background:linear-gradient(160deg,#121720,#0e1219);border:1px solid var(--line);border-radius:var(--radius);padding:20px}.card h3{margin:0 0 16px;font-size:16px}.field{margin-bottom:15px}.field label{display:block;color:#c5cfdb;font-size:12px;font-weight:700;margin-bottom:7px}.field input,.field select{width:100%;padding:12px 13px;background:#090d13;border:1px solid #293343;color:var(--text);border-radius:11px;outline:none}.field input:focus,.field select:focus{border-color:var(--cyan);box-shadow:0 0 0 3px #63f5df12}.subnote{font-size:11px;color:var(--muted);margin-top:6px}.choice-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}.choice{border:1px solid var(--line);border-radius:11px;padding:11px;background:#0b1017;cursor:pointer;color:var(--muted);text-align:left}.choice.active{border-color:var(--cyan);color:var(--cyan);background:#10201f}
+.results{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.stat{padding:14px 12px;border-radius:13px;background:#0a0e14;border:1px solid #222c39}.stat small{display:block;color:var(--muted);font-size:11px}.stat strong{font-size:27px;display:block;margin-top:4px;letter-spacing:-1px}.stat .range{color:var(--cyan)}.copy-row{display:flex;gap:10px;margin-top:15px}.copy-row .btn{flex:1}.generated-note{font-size:12px;color:var(--muted);margin:12px 0 0}
+.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:20px 0 48px}.feature{border:1px solid var(--line);border-radius:16px;background:#10141b;padding:18px}.feature .icon{font-size:11px;color:var(--cyan);font-weight:900;letter-spacing:1px}.feature h3{font-size:16px;margin:9px 0 5px}.feature p{color:var(--muted);font-size:13px;margin:0}
+.guide{border:1px solid var(--line);border-radius:18px;background:#0e1219;padding:24px;margin-bottom:40px}.guide h2{margin-top:0}.guide p,.guide li{color:var(--muted);font-size:14px}.guide strong{color:#eaf0f7}
+footer{border-top:1px solid #202833;padding:24px 0;color:var(--muted);font-size:12px}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);padding:12px 18px;background:#142521;border:1px solid #35685c;color:var(--cyan);border-radius:12px;opacity:0;pointer-events:none;transition:.25s;z-index:20}.toast.show{opacity:1}
+@media(max-width:780px){nav{display:none}.hero{grid-template-columns:1fr;padding-top:45px}.hero-art{min-height:235px}.art-number{font-size:62px}.generator{grid-template-columns:1fr}.feature-grid{grid-template-columns:1fr}.section-title{align-items:start;flex-direction:column}.results{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+<a class="brand" href="#"><div class="logo">S</div>SENSI<span>LAB</span></a>
+<nav><a href="#gerador">Gerador</a><a href="#como-funciona">Como funciona</a><a href="#dicas">Dicas</a></nav>
+<div class="pill">BETA • FREE FIRE</div>
+</div></header>
+<main class="wrap">
+<section class="hero">
+<div>
+<div class="eyebrow">Seu laboratório de mira</div>
+<h1>Encontre sua<br><em>melhor sensi.</em></h1>
+<p>Uma configuração inicial feita para seu aparelho e seu estilo. Gere, copie e ajuste no treinamento até encontrar o controle que combina com você.</p>
+<div class="actions"><a class="btn btn-primary" href="#gerador">CRIAR MINHA SENSI ↗</a><a class="btn btn-ghost" href="#como-funciona">Como funciona</a></div>
+</div>
+<div class="hero-art">
+<div class="art-top"><span>LAB / CONFIGURAÇÃO</span><span class="art-status">● SISTEMA ONLINE</span></div>
+<div class="art-number">AIM<span style="color:#f2f5fa">.</span></div>
+<div class="art-caption">PRECISÃO É AJUSTE. NÃO MÁGICA.</div>
+<div class="mini-bars"><i style="height:28%"></i><i style="height:43%"></i><i style="height:67%"></i><i style="height:51%"></i><i style="height:85%"></i><i style="height:61%"></i><i style="height:100%"></i><i style="height:72%"></i><i style="height:40%"></i><i style="height:58%"></i></div>
+</div>
+</section>
+
+<div class="section-title" id="gerador"><div><h2>Gerador de sensibilidade</h2><p>Personalize uma base e leve para o campo de treinamento.</p></div><span class="pill">01 / PERSONALIZAR</span></div>
+<section class="generator">
+<div class="card">
+<h3>Seu dispositivo</h3>
+<div class="field"><label for="brand">Marca</label><select id="brand"><option value="generic">Selecione a marca</option><option>Samsung</option><option>Motorola</option><option>Xiaomi</option><option>Redmi</option><option>POCO</option><option>Apple</option><option>Realme</option><option>Infinix</option><option> outras</option></select></div>
+<div class="field"><label for="model">Modelo do celular (opcional)</label><input id="model" placeholder="Ex.: Galaxy A15, Moto G54, iPhone 11"></div>
+<div class="field"><label>Estilo de jogo</label><div class="choice-row"><button class="choice active" data-style="rush">Rush / puxada</button><button class="choice" data-style="control">Controle / precisão</button></div></div>
+<div class="field"><label>Velocidade de mira que você prefere</label><select id="speed"><option value="high">Rápida</option><option value="balanced" selected>Equilibrada</option><option value="low">Mais controlada</option></select></div>
+<button class="btn btn-primary" id="generate" style="width:100%">GERAR CONFIGURAÇÃO</button>
+<div class="subnote">As sugestões são uma base de teste, não uma promessa de desempenho.</div>
+</div>
+<div class="card">
+<h3>Configuração sugerida <span style="color:var(--cyan);font-size:12px">/ SENSI</span></h3>
+<div class="results" id="resultGrid">
+<div class="stat"><small>Geral</small><strong class="range" id="general">--</strong></div>
+<div class="stat"><small>Red Dot</small><strong id="red">--</strong></div>
+<div class="stat"><small>Mira 2x</small><strong id="x2">--</strong></div>
+<div class="stat"><small>Mira 4x</small><strong id="x4">--</strong></div>
+<div class="stat"><small>Sniper</small><strong id="sniper">--</strong></div>
+<div class="stat"><small>Olhadinha</small><strong id="look">--</strong></div>
+</div>
+<div class="copy-row"><button class="btn btn-primary" id="copy">COPIAR TODA A SENSI</button><button class="btn btn-ghost" id="reset">REINICIAR</button></div>
+<p class="generated-note" id="resultText">Escolha seu estilo e gere uma configuração para começar.</p>
+</div>
+</section>
+
+<div class="section-title"><div><h2>O que tem no laboratório?</h2><p>Ferramentas pensadas para jogadores que querem experimentar e evoluir.</p></div></div>
+<section class="feature-grid">
+<div class="feature"><div class="icon">TOOL / 01</div><h3>Sensi por dispositivo</h3><p>Parta de uma configuração sugerida e ajuste conforme resposta da tela e FPS.</p></div>
+<div class="feature"><div class="icon">TOOL / 02</div><h3>Copiar em um toque</h3><p>Copie os números sem ficar selecionando cada campo individualmente.</p></div>
+<div class="feature"><div class="icon">TOOL / 03</div><h3>Guia de ajuste</h3><p>Aprenda a testar uma mudança por vez e encontrar seu próprio ponto de equilíbrio.</p></div>
+</section>
+
+<section class="guide" id="como-funciona">
+<h2>Como encontrar uma sensibilidade que funciona?</h2>
+<p>Sensibilidade não é uma fórmula universal. O mesmo número pode parecer diferente dependendo da tela, taxa de atualização, estabilidade de FPS, tamanho do botão de tiro e hábito de movimentação.</p>
+<ol>
+<li><strong>Use a configuração como ponto de partida.</strong> Teste no treinamento antes de jogar ranqueada.</li>
+<li><strong>Altere uma variável por vez.</strong> Se a mira passar da cabeça, reduza um pouco; se não acompanhar o movimento, aumente gradualmente.</li>
+<li><strong>Priorize consistência e conforto.</strong> Não existe número que garanta capa ou vitória.</li>
+</ol>
+</section>
+<section class="guide" id="dicas">
+<h2>Configuração, DPI e desempenho</h2>
+<p>DPI e opções de desenvolvedor variam entre aparelhos e podem afetar a interface ou a usabilidade. Evite mudanças extremas. Prefira as opções do próprio jogo e mantenha o aparelho estável, com espaço livre e sem superaquecimento.</p>
+<p><strong>Nota:</strong> SENSILAB é um projeto independente e não é afiliado, patrocinado ou aprovado pela Garena ou Free Fire.</p>
+</section>
+</main>
+<footer><div class="wrap foot"><span>© 2026 SENSILAB • Projeto independente para comunidade Free Fire.</span><span>Feito para experimentar. Ajuste para você.</span></div></footer>
+<div class="toast" id="toast">Copiado para a área de transferência.</div>
+<script>
+const presets={rush:{general:188,red:176,x2:164,x4:148,sniper:92,look:180},control:{general:168,red:150,x2:138,x4:122,sniper:78,look:160}};
+const speedMods={high:8,balanced:0,low:-8};
+let current={...presets.rush};
+function clamp(n){return Math.max(0,Math.min(200,n))}
+function render(){for(const [k,v] of Object.entries(current))document.getElementById(k).textContent=v}
+function make(){let style=document.querySelector('.choice.active').dataset.style;let speed=speedMods[document.getElementById('speed').value];let brand=document.getElementById('brand').value;let model=document.getElementById('model').value.trim();let base={...presets[style]};let deviceMod=0;if(['Apple'].includes(brand))deviceMod=-4;else if(['Xiaomi','Redmi','POCO'].includes(brand))deviceMod=2;else if(['Motorola','Samsung'].includes(brand))deviceMod=0;
+current={general:clamp(base.general+speed+deviceMod),red:clamp(base.red+speed+deviceMod),x2:clamp(base.x2+Math.round(speed*.65)+deviceMod),x4:clamp(base.x4+Math.round(speed*.45)+deviceMod),sniper:clamp(base.sniper+Math.round(speed*.25)),look:clamp(base.look+speed+deviceMod)};
+render();document.getElementById('resultText').textContent=`Base ${style==='rush'?'rush/puxada':'controle/precisão'}${model?' • '+model:''}. Teste no treinamento e ajuste aos poucos.`}
+document.querySelectorAll('.choice').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.choice').forEach(x=>x.classList.remove('active'));b.classList.add('active')}));
+document.getElementById('generate').addEventListener('click',make);
+document.getElementById('copy').addEventListener('click',async()=>{let text=`SENSILAB — SENSIBILIDADE FREE FIRE\nGeral: ${current.general}\nRed Dot: ${current.red}\nMira 2x: ${current.x2}\nMira 4x: ${current.x4}\nSniper: ${current.sniper}\nOlhadinha: ${current.look}\n\nConfiguração inicial sugerida. Ajuste no treinamento.`;try{await navigator.clipboard.writeText(text);toast('Sensibilidade copiada!')}catch(e){toast('Selecione e copie manualmente.')}});
+document.getElementById('reset').addEventListener('click',()=>{document.getElementById('brand').value='generic';document.getElementById('model').value='';document.getElementById('speed').value='balanced';document.querySelectorAll('.choice').forEach(x=>x.classList.toggle('active',x.dataset.style==='rush'));current={general:'--',red:'--',x2:'--',x4:'--',sniper:'--',look:'--'};render();document.getElementById('resultText').textContent='Escolha seu estilo e gere uma configuração para começar.'});
+function toast(s){let t=document.getElementById('toast');t.textContent=s;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2200)}
+</script>
+</body></html>
